@@ -1,0 +1,13 @@
+<div class="relative" [style.width]="width">
+    <div class="px-[25px] py-[10px] bg flex items-center justify-between rounded-[10px] w-full">
+        <p>Example</p>
+<mat-icon (click)="show()" class="cursor-pointer text-[#929292] text-[30px]" [@rotatedState]='openBox'>expand_more</mat-icon>
+    </div>
+    <div class="bg-white rounded-b-[10px] z-10 py-[10px]
+     px-[25px] hidden flex-col gap-[5px]
+     absolute w-full top-8"
+    [ngClass]="{flex: hidden}"
+    #openBox>
+    <p *ngFor="let x of arr" class="cursor-pointer">{{x}}</p>
+    </div>
+</div>
