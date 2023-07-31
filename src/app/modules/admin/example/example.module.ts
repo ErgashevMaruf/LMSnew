@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { Route, RouterModule } from '@angular/router';
 import { ExampleComponent } from 'app/modules/admin/example/example.component';
 import { SharedModule } from 'app/shared/shared.module';
 
 const exampleRoutes: Route[] = [
     {
-        path     : '',
+        path: '',
         component: ExampleComponent
     }
 ];
@@ -14,11 +15,11 @@ const exampleRoutes: Route[] = [
     declarations: [
         ExampleComponent
     ],
-    imports     : [
+    imports: [
         RouterModule.forChild(exampleRoutes),
-        SharedModule
+        SharedModule,
+        MatIconModule
     ]
 })
-export class ExampleModule
-{
+export class ExampleModule {
 }

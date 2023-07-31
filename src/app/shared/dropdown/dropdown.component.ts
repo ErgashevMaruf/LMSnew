@@ -11,33 +11,25 @@ import { transition, trigger, state, style, animate } from '@angular/animations'
       state('rotated', style({ transform: 'rotate(180deg)' })),
       transition('rotated => default', animate('200ms ease-out')),
       transition('default => rotated', animate('200ms ease-in'))
-  ])
-]
+    ])
+  ]
 })
 export class DropdownComponent implements OnInit {
 
-    @Input('width') width = '200px'
+  @Input('width') width = '200px'
 
-    constructor() { }
-    hidden = false;
-    openBox = 'default'
+  constructor() { }
+  hidden = false;
 
-    arr = ['Ergashev', 'Maruf', 'Ahror',]
+  openBox = 'default'
+
+  arr = ['Ergashev', 'Maruf', 'Ahror',]
 
   ngOnInit() {
   }
-  show()
-  {
+  show() {
     this.openBox = (this.openBox === 'default' ? 'rotated' : 'default');
     this.hidden = !this.hidden;
   }
-  @HostListener('document:click', ['$event'])
-  DocumentClick(event: Event) {
-    this.hidden = false;
-  }
-
-}
-function Viewchildren() {
-    throw new Error('Function not implemented.');
 }
 

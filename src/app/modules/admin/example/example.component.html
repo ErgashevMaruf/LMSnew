@@ -1,23 +1,108 @@
 <div class="max-w-7xl w-full mx-auto">
-    <h3 class="text-[#003B83] text-[35px] font-bold mb-[10px]">Создание курса</h3>
+    <h3 class="text-[#003B83] text-[35px] font-bold mb-[10px]">
+        Создание курса
+    </h3>
     <div class="w-full bg px-[40px] py-[20px]">
         <h3 class="text-[#354F97] text-[33px] font-semibold">
             Общие параметры
         </h3>
-        <div class="w-full h-[4px] bg-[#003B83] bg-opacity-[0.19] rounded-[10px]"></div>
+        <app-divider></app-divider>
         <h4 class="text-[#232323] font-medium">Выбор типа *</h4>
         <app-dropdown></app-dropdown>
         <h4 class="text-[#232323] font-medium">Язык курса *</h4>
         <app-dropdown></app-dropdown>
-        <h4 class="text-[#232323] font-medium">Категория  *</h4>
+        <h4 class="text-[#232323] font-medium">Категория *</h4>
         <app-dropdown></app-dropdown>
-        <h4 class="text-[#232323] font-medium">Категория  *</h4>
+        <h4 class="text-[#232323] font-medium">Категория *</h4>
         <div class="w-full h-[50px] bg rounded-[10px]">
-            <input type="text" class="flex w-full h-full px-[10px]">
+            <input type="text" class="flex w-full h-full px-[10px]" />
         </div>
         <h4 class="text-[#232323] font-medium">Описание курса *</h4>
         <div class="w-full h-[50px] bg rounded-[10px]">
-            <input type="text" class="flex w-full h-full px-[10px]">
+            <input type="text" class="flex w-full h-full px-[10px]" />
+        </div>
+        <h4 class="text-[#232323] font-medium">Описание курса *</h4>
+        <div class="flex gap-[40px]">
+            <p class="w-[430px] text-[13px] font-medium">
+                Загрузите обложку, она будет отображаться в каталоге курсов.
+                Максимальный размер 10 МБ Допустимые форматы .jpg, .jpeg, .png,
+                .svg
+            </p>
+            <div
+                class="w-[150px] h-[30px] relative bg-green flex items-center justify-center"
+            >
+                <input
+                    type="file"
+                    class="flex h-full w-full absolute opacity-0 cursor-pointer"
+                />
+                <p class="text-[20px] font-semibold text-white">Загрузить</p>
+            </div>
+        </div>
+        <div class="flex gap-[10px] items-center py-[2px]">
+            <p class="text-[#0521D5] text-[18px] font-medium">
+                Обложка_курса_эпидемиалогии.jpg
+            </p>
+            <mat-icon
+                class="mt-[5px]"
+                svgIcon="heroicons_outline:eye"
+            ></mat-icon>
+        </div>
+        <div class="flex gap-[20px] items-center">
+            <h3 class="text-[#354F97] text-[33px] font-semibold">Оплата</h3>
+            <app-sliding-btn></app-sliding-btn>
+        </div>
+        <app-divider></app-divider>
+        <h4 class="text-[#232323] font-medium">Тип оплаты *</h4>
+        <app-dropdown></app-dropdown>
+        <h4 class="text-[#232323] font-medium">Цена*</h4>
+        <input
+            type="text"
+            class="w-[200px] h-[40px] px-[10px] bg rounded-[10px]"
+        />
+        <h3 class="text-[#354F97] text-[33px] font-semibold">
+            Настройка сроков
+        </h3>
+        <app-divider></app-divider>
+        <h4 class="text-[#232323] font-medium">Срок доступности курса</h4>
+        <input
+            type="text"
+            class="w-[200px] h-[40px] px-[10px] bg rounded-[10px]"
+        />
+        <h4 class="text-[#232323] font-medium">Срок самого курса *</h4>
+        <div class="flex gap-[20px] items-center">
+            <input
+                type="text"
+                class="w-[200px] h-[40px] px-[10px] bg rounded-[10px]"
+            />
+            <app-dropdown></app-dropdown>
+        </div>
+        <div class="flex gap-[20px] items-center">
+            <h3 class="text-[#354F97] text-[33px] font-semibold">Сертификат</h3>
+            <app-sliding-btn></app-sliding-btn>
+        </div>
+        <app-divider></app-divider>
+        <div class="flex items-center gap-[20px]">
+            <div
+                class="w-[150px] h-[30px] relative bg-disable flex items-center justify-center"
+            >
+                <input
+                    type="file"
+                    class="flex h-full w-full absolute opacity-0 cursor-pointer"
+                />
+                <p class="text-[20px] font-semibold text-white">Add file</p>
+            </div>
+            <p class="text-[#232323] text-[18px] font-medium">
+                По дефолту (для каждого типа курса) стандартный сертификат
+            </p>
+        </div>
+        <div class="text-[18px] text-white font-medium flex gap-[20px]">
+            <button class="px-[20px] py-[12px] bg-red">Отменить</button>
+            <button class="px-[20px] py-[12px] bg-disable">
+                Добавить в черновик
+            </button>
+            <button class="px-[20px] py-[12px] bg-green">
+                Перейти к созданию контента
+            </button>
         </div>
     </div>
 </div>
